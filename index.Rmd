@@ -162,4 +162,12 @@ shinyServer(function(input, output) {
 
 I used `shinydashboard` to make a slightly different looking web UI. 
 
+[shiny link](https://krozic.shinyapps.io/shiny_app/)
+
+To use the app:
+
+1. Choose the dates you would like to observe the change for.
+2. Choose the type of table you would like to view.
+3. Click 'Apply'.
+
 **Have a great day stranger!**
