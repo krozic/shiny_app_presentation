@@ -26,11 +26,13 @@ library(ggplot2)
 
 After spending a lot of time finding and preparing the data to work with this project, I made 2 final datasets that are used for this final project: A tall dataset containing population values for each census district factorized by year, and the shape data to draw the cartographic boundaries.
 
-```{r}
+```{r, results = F}
 popTot <- read.csv('./data/popTot.csv', 
                    na.strings = '')
 shp <- st_read('./data/division_shapes_digital/lcd_000a16a_e.shp', 
                stringsAsFactors = F)
+```
+```{r}
 head(popTot)
 head(shp)
 ```
@@ -48,6 +50,10 @@ ggplot() +
         geom_sf(data = popMap, aes(fill = (`2020`-`2019`)/`2019`*10000)) +
         scale_fill_gradient2()
 ```
+
+The index.html file was too large when containing the leaflet app, so I used ggplot instead. 
+
+This is an example of the type of plot I will be making in leaflet, with the same calculation. In this example, the population change is visualized between 2019 and 2020. 
 
 ### Notes on shiny implementation
 
