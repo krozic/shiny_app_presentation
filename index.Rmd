@@ -45,7 +45,7 @@ popTot <- spread(popTot, YEAR, POPULATION) %>%
 popMap <- st_as_sf(merge(popTot, shp))
 
 ggplot() + 
-        geom_sf(data = popMap, aes(fill = (`2020`-`2019`)/`2019`)) +
+        geom_sf(data = popMap, aes(fill = (`2020`-`2019`)/`2019`*10000)) +
         scale_fill_gradient2()
 ```
 
